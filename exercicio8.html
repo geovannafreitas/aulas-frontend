@@ -7,6 +7,49 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>exercicio8</h1>
+    <div class>
+      <div class="header">cabeçalho</div>
+      <div class="sidebar">barra lateral</div>
+      <div class="main">conteudo principal</div>
+      <div class="footer">Rodapé</div>
+    </div>
+    <style>
+    .container{
+       display:grid;
+       grid-template-areas: 
+       "header header header"
+       "sidebar sidebar sidebar"
+       "footer footer footer";
+       grid-template-rows: 60px 1fr 40px;
+       grid-template-columns: 200px 1fr 1rf;
+       height: 100vh;
+    }
+    .header {
+       grid-area: header;
+       background-color: #333;
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    .sidebar {
+       grid-area: sidebar;
+       background-color: #f4f4f4;
+       padding: 20px;
+    }
+    .main{
+       grid-area: main;
+       padding: 20px;
+       background-color: #fff;
+    }
+    .footer{
+       grid-area: footer;
+       background-color: #333;
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    </style>
 </body>
 </html>
